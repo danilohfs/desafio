@@ -76,7 +76,7 @@ public class TransferenciaService {
 
             // Verificar o status code da resposta
             if (responseEntity.getStatusCode() == HttpStatus.TOO_MANY_REQUESTS) {
-
+                throw new Exception("Não foi possível concluir a transferência no momento. Por favor, tente novamente mais tarde.");
             }
             return transferenciaResponseDTO;
         } catch (Exception e) {
